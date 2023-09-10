@@ -3,7 +3,7 @@
 # Security Needs, Threats, and Features
 # Motivation
 # OSS project description
-# License Summary and Contributor Agreement
+# License Summary
 The OpenMRS core application is licensed under the Mozilla Public License (MPL) version 2, along with a healthcare disclaimer.
 
 # Contributing Guidelines
