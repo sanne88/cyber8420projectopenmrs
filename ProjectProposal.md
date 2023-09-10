@@ -4,12 +4,15 @@
 # Motivation
 # OSS project description
 # License Summary
-The OpenMRS core application is licensed under the Mozilla Public License (MPL) version 2, along with a healthcare disclaimer.
+
+The OpenMRS core application is licensed under the Mozilla Public License (MPL) version 2, along with a healthcare disclaimer http://openmrs.org/license.The Health-Related Additional Disclaimer of Warranty and Limitation of Liability is a tool afforded by MPL 2.0 that allows to address the specific medico-legal needs without having to modify the license itself.
+
+The website supports using opensource IDE tools and offers licenses if there is a strong enough business justification.
 
 # Contributing Guidelines
 GuideLines
- 1. Join the OpenMRS community. Get an OpenMRS ID
- 2. Setup Git and Fork the repository and pull chanegs from "main" branch
+ 1. Join the OpenMRS community. Get an OpenMRS ID by registering at  http://om.rs/id
+ 2. Setup Git and Fork the repository and pull chanegs from "main" branch.Make sure the repository is public.
  3. Name of the repository should include "OpenMRS" like "openmrs-category/module-name"
  4. Select or Create issue on the JIRA board https://issues.openmrs.org/ and change the status to "Claim issue"
  5. If its a new issue , then wait for your issue to be reviewed by a core OpenMRS developer.
@@ -33,7 +36,8 @@ Coding Guidelines
 
 1. They recommed to use OpenMRS SDK which has all the required setup environment.Apart from this Java > 1.7 or higher needs to be installed
 2. OpenMRS Standalone Application -This is a easy to run and  is the recommended option to update an existing module.Installation of "Maven" is still required as this is not bundled in the standalone application.
-3. OpenMRS organised the privileges of its contributors in developer stages as below
+3. There is also the option to manually install everything.
+4. OpenMRS organised the privileges of its contributors in developer stages as below
   1. "Noob"
   2. "Begineer"
   3. "Coder"
@@ -43,7 +47,10 @@ Coding Guidelines
 
 The developers can go from being a newcomer to the community (/dev/null) to a development expert (/dev/5) as their technical proficiency increases. The goal of the developer phases is to assist people understand where they are in their journey, inspire them to become more proficient in OpenMRS development.
 
-Questions
+Deployment:
+ OpenMRS adopted the CI tool Bamboo following our shift into the agile development process. The continuous integration tools can be accessed at http://ci.openmrs.org/.
+ Slack Channel: https://wiki.openmrs.org/display/IRC
+Get Help:
 Developers with any questions can post the questions to the 
 https://talk.openmrs.org/ and also can email to the community community@openmrs.org and they will help answer any questions.
 
