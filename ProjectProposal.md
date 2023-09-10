@@ -55,6 +55,44 @@ Developers with any questions can post the questions to the
 https://talk.openmrs.org/ and also can email to the community community@openmrs.org and they will help answer any questions.
 
 # Security History
+OpenMRS had a couple of security vulnerabilities in the past as seen here: [Closed Security vulnerabilities in the past](https://issues.openmrs.org/browse/RA-1992?jql=status%20%3D%20Closed%20AND%20labels%20%3D%20security%20ORDER%20BY%20created%20DESC).
+They have categorized security-related tickets as Story, Bug, Task, and New Features.
+Some significant changes include:
+
+|Ticket|Type|Description|Created|Resolved|
+|------|------|------|------|------|
+|[TRUNK-6185](https://issues.openmrs.org/browse/TRUNK-6185)|Story|Loading CSRF properties on initial startup of the OpenMRS application|2023-08-08|2023-08-26|
+|[RESTWS-903](https://issues.openmrs.org/browse/RESTWS-903)|Bug|Session endpoint returns the session key id|2022-11-28|2022-11-28|
+|[TRUNK-5829](https://issues.openmrs.org/browse/TRUNK-5829)|Bug|Dependency vulnerabilities amongst 10 repositories reported by GitHub|2020-07-03|2020-08-10|
+|[TRUNK-4819](https://issues.openmrs.org/browse/TRUNK-4819)|Bug|OpenMRS is vulnerable to attackers unless proxies and XML entities are ignored. Spring EL support to be disabled|2016-01-28|2016-01-28|
+|[TRUNK-4817](https://issues.openmrs.org/browse/TRUNK-4817)|Bug|User redirected to Login page after login.|2016-01-27|2016-03-09|
+|[TRUNK-3936](https://issues.openmrs.org/browse/TRUNK-3936)|Bug|Openmrs-runtime.properties file contains database credentials|2013-03-21|2013-09-12|
+|[TRUNK-3934](https://issues.openmrs.org/browse/TRUNK-3934)|Bug|openmrs-runtime.properties file should be modified by the .war file and this file is in the /user directory which should not be tampered. Ideally tomcat user should have write access to the /user directory|2013-03-21|2014-10-28|
+|[TRUNK-3878](https://issues.openmrs.org/browse/TRUNK-3878)|Bug|Issue with Forgot password form|2013-01-17|2013-09-12|
+|[TRUNK-3877](https://issues.openmrs.org/browse/TRUNK-3877)|Bug|Secret question deleted when password is changed|2013-01-17|2014-10-28|
+|[TRUNK-3781](https://issues.openmrs.org/browse/TRUNK-3781)|New Feature|Daemon thread support for modules|2012-11-07|2012-12-04|
+|[SEARCH-15](https://issues.openmrs.org/browse/SEARCH-15)|New Feature|Secure Lucene-generated index files|2011-06-23|2020-11-09|
+|[TRUNK-2178](https://issues.openmrs.org/browse/TRUNK-2178)|Bug|Skip columns that contain user entered data|2011-04-04|2011-04-05|
+|[TRUNK-1296](https://issues.openmrs.org/browse/TRUNK-1296)|Bug|Restrict forms available on the user dashboard based on user privileges and roles.|2009-10-09|2010-07-01|
+
+A few critical unresolved security concerns need to be fixed are listed below.
+
+|Ticket|Type|Description|Created|
+|------|------|------|------|
+|[TRUNK-6155](https://issues.openmrs.org/browse/TRUNK-6155)|Task|Upgrade Liquibase|2022-12-15|
+|[TRUNK-6154](https://issues.openmrs.org/browse/TRUNK-6154)|Task|Few endpoints at the API are publicly available without any authorization|2022-12-14|
+|[TRUNK-6043](https://issues.openmrs.org/browse/TRUNK-6043)|Bug|Blind time-based SQL injection vulnerability|2021-10-29|
+|[TRUNK-6041](https://issues.openmrs.org/browse/TRUNK-6041)|Bug|Vulnerability in scripts to generate Liquibase file|2021-10-19|
+
+There is also a highly critical security advisory issued by the OpenMRS team. Details of which can be found here: [Security Advisory](https://github.com/openmrs/openmrs-core/security/advisories/GHSA-8rgr-ww69-jv65). The vulnerability is about the possibility of attackers sending GET requests to the "/images" and "/initfilter/scripts" endpoints. Due to a lack of proper input validation and security checks, these requests can be manipulated and files on the system can be compromised. This vulnerability has been fixed and the OpenMRS community suggests upgrading to the latest patch version of OpenMRS and upgrading the tomcat instance as well.
+
+Any security-related concerns can be emailed to [security@openmrs.org](mailto:security@openmrs.org)
+
+
+
+
+
+
 # Project Planning and Reflection
 # Overall team planning and Individual Contribution
 
