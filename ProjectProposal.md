@@ -1,15 +1,92 @@
 # Project Proposal
-# Systems Engineering View
-# Security Needs, Threats, and Features
-# Motivation
-# OSS project description
-# License Summary
+## Systems Engineering View
+## Perceived Security Threats
+
+1. **Data Breaches**:
+   - Unauthorized access to patient records can lead to privacy violations.
+   - Data leakage due to inadequate data protection can expose sensitive patient information.
+
+2. **Injection Attacks**:
+   - SQL Injection: Attackers can manipulate the database by injecting malicious SQL queries.
+   - Cross-Site Scripting (XSS): Vulnerabilities in web pages can allow attackers to inject malicious scripts into users' browsers.
+
+3. **Authentication and Authorization**:
+   - Weak passwords can be easily guessed or cracked.
+   - Insufficient access controls can lead to unauthorized access to patient data.
+
+4. **Session Management**:
+   - Session fixation: Attackers may set a user's session ID, allowing them to hijack the session.
+   - Session timeout issues can expose active sessions to unauthorized access.
+
+5. **Cross-Site Request Forgery (CSRF)**:
+   - CSRF attacks trick authenticated users into performing actions without their consent.
+
+6. **Misconfigurations**:
+   - Insecure defaults and misconfigurations can create vulnerabilities that attackers may exploit.
+
+7. **Software Vulnerabilities**:
+   - Vulnerabilities in dependencies and software components can be entry points for attacks.
+
+8. **Insider Threats**:
+   - Malicious or negligent actions by authorized users can jeopardize patient data.
+
+9. **Denial of Service (DoS) Attacks**:
+   - Attackers may overload the system with excessive traffic, causing it to become unavailable.
+
+10. **Phishing and Social Engineering**:
+    - Phishing attempts and social engineering tactics may lead to unauthorized access or data disclosure.
+
+## Security Features
+
+1. **Data Protection**:
+   -  Secure patient records and sensitive data with strong encryption.
+   -  Implement data encryption in transit (HTTPS) and at rest (data storage).
+
+2. **Authentication and Authorization**:
+   -  Enforce strong user authentication mechanisms (e.g., multi-factor authentication) and encrypt user credentials.
+   -  Implement robust access control to prevent unauthorized access.
+   -  Enforce password policies to ensure strong and unique passwords.
+
+3. **Injection Prevention**:
+   -  Implement input validation and output encoding to prevent SQL Injection.
+   -  Mitigate Cross-Site Scripting (XSS) attacks through input sanitization.
+
+4. **Session Management**:
+   -  Prevent session fixation by generating new session IDs upon login.
+   -  Configure proper session timeout settings for security.
+
+5. **Cross-Site Request Forgery (CSRF) Protection**:
+   - Implement CSRF protection mechanisms like anti-CSRF tokens.
+
+6. **Configuration Security**:
+   -  Ensure secure default configurations and provide secure configuration guidelines.
+   -  Mitigate misconfigurations by conducting regular security reviews.
+
+7. **Software Vulnerability Management**:
+   - Regularly update and patch all software components.
+   - Continuously monitor for vulnerabilities in dependencies and apply patches promptly.
+
+8. **Insider Threat Mitigation**:
+   - Implement access controls and audit trails to monitor user actions.
+   - Provide training to employees to raise awareness about security threats.
+
+9. **Denial of Service (DoS) Resilience**:
+   - Implement measures such as rate limiting and traffic filtering to withstand DoS attacks.
+
+10. **Phishing and Social Engineering Awareness**:
+    - Conduct regular security awareness training for personnel to recognize and prevent social engineering attacks.
+
+Ensure that these security features are addressed to maintain the security and integrity of the OpenMRS platform and safeguard patient data.
+
+## Motivation
+## OSS project description
+## License Summary
 
 The OpenMRS core application is licensed under the Mozilla Public License (MPL) version 2, along with a healthcare disclaimer http://openmrs.org/license.The Health-Related Additional Disclaimer of Warranty and Limitation of Liability is a tool afforded by MPL 2.0 that allows to address the specific medico-legal needs without having to modify the license itself.
 
 The website supports using opensource IDE tools and offers licenses if there is a strong enough business justification.
 
-# Contributing Guidelines
+## Contributing Guidelines
 GuideLines
  1. Join the OpenMRS community. Get an OpenMRS ID by registering at  http://om.rs/id
  2. Setup Git and Fork the repository and pull chanegs from "main" branch.Make sure the repository is public.
@@ -54,7 +131,7 @@ Get Help:
 Developers with any questions can post the questions to the 
 https://talk.openmrs.org/ and also can email to the community community@openmrs.org and they will help answer any questions.
 
-# Security History
+## Security History
 OpenMRS had a couple of security vulnerabilities in the past as seen here: [Closed Security vulnerabilities in the past](https://issues.openmrs.org/browse/RA-1992?jql=status%20%3D%20Closed%20AND%20labels%20%3D%20security%20ORDER%20BY%20created%20DESC).
 They have categorized security-related tickets as Story, Bug, Task, and New Features.
 Some significant changes include:
@@ -93,7 +170,7 @@ Any security-related concerns can be emailed to [security@openmrs.org](mailto:se
 
 
 
-# Project Planning and Reflection
-# Overall team planning and Individual Contribution
+## Project Planning and Reflection
+## Overall team planning and Individual Contribution
 
 
