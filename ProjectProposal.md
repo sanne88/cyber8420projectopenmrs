@@ -125,11 +125,14 @@ If you are selecting an existing ticket to work on, make sure that:
 The developers can go from being a newcomer to the community (/dev/null) to a development expert (/dev/5) as their technical proficiency increases. The goal of the developer phases is to assist people understand where they are in their journey, inspire them to become more proficient in OpenMRS development.
 
 **Deployment**:
- OpenMRS adopted the CI tool Bamboo following our shift into the agile development process. The continuous integration tools can be accessed at http://ci.openmrs.org/.
- Slack Channel: https://wiki.openmrs.org/display/IRC
-Get Help:
-Developers with any questions can post the questions to the 
-https://talk.openmrs.org/ and also can email to the community community@openmrs.org and they will help answer any questions.
+
+OpenMRS adopted the CI tool Bamboo following our shift into the agile development process. The continuous integration tools can be accessed at http://ci.openmrs.org/.
+
+**Get Help**:
+
+Developers with any questions can post the questions to the https://talk.openmrs.org/ and also can email to the community community@openmrs.org and they will help answer any questions.
+
+Slack Channel: https://wiki.openmrs.org/display/IRC
 
 ## Security History
 OpenMRS had a couple of security vulnerabilities in the past as seen here: [Closed Security vulnerabilities in the past](https://issues.openmrs.org/browse/RA-1992?jql=status%20%3D%20Closed%20AND%20labels%20%3D%20security%20ORDER%20BY%20created%20DESC).
