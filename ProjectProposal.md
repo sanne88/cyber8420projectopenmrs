@@ -115,12 +115,12 @@ Coding Guidelines
 2. OpenMRS Standalone Application -This is a easy to run and  is the recommended option to update an existing module.Installation of "Maven" is still required as this is not bundled in the standalone application.
 3. There is also the option to manually install everything.
 4. OpenMRS organised the privileges of its contributors in developer stages as below
-  1. "Noob"
-  2. "Begineer"
-  3. "Coder"
-  4. "Skilled"
-  5. "Expert"
-  6. "Guru"
+  - "Noob"
+  - "Begineer"
+  - "Coder"
+  - "Skilled"
+  - "Expert"
+  - "Guru"
 
 The developers can go from being a newcomer to the community (/dev/null) to a development expert (/dev/5) as their technical proficiency increases. The goal of the developer phases is to assist people understand where they are in their journey, inspire them to become more proficient in OpenMRS development.
 
