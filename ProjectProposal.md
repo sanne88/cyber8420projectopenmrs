@@ -9,8 +9,8 @@ This hypothetical operational environment for OpenMRS depicts a typical healthca
 
 The following diagram offers a high-level overview of the openMRS core module. Since this package can be easily deployed as an application with minimal configuration changes, our perspective revolves around considering the application in terms of software and data as the core elements of our system of interest. We have identified enabling systems as those used in the development, deployment, and maintenance of the application. Other systems encompass third-party providers, such as insurance provider information and the payment services module.
 
+![System Security Engineering View](https://github.com/sanne88/cyber8420projectopenmrs/assets/144483086/6b23cd9c-1a22-4323-8ab5-ca8982dbb9f8)
 
-![System Security Engineering View](https://github.com/sanne88/cyber8420projectopenmrs/assets/99826496/774bfce7-1aee-4bff-ac6d-257d01c57071)
 
 ## Perceived Security Threats
 
