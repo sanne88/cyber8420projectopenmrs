@@ -1,5 +1,11 @@
 # Project Proposal
 ## Systems Engineering View
+
+The following diagram offers a high-level overview of the openMRS core module. Since this package can be easily deployed as an application with minimal configuration changes, our perspective revolves around considering the application in terms of software and data as the core elements of our system of interest. We have identified enabling systems as those used in the development, deployment, and maintenance of the application. Other systems encompass third-party providers, such as insurance provider information and the payment services module.
+
+
+![System Security Engineering View](https://github.com/sanne88/cyber8420projectopenmrs/assets/99826496/774bfce7-1aee-4bff-ac6d-257d01c57071)
+
 ## Perceived Security Threats
 
 1. **Data Breaches**:
@@ -80,6 +86,19 @@ Ensure that these security features are addressed to maintain the security and i
 
 ## Motivation
 ## OSS project description
+OpenMRS is a collaborative open-source project to develop software to support the delivery of health care in developing countries. The system is designed to be usable in very resource poor environments and can be modified with the addition of new data items, forms and reports without programming. As a platform, it is intended that many organizations can adopt and modify avoiding the need to develop a system from scratch. Currently, it has around 40 packages and 500 contributors, is mostly written in Java(65%) with supporting languages of Javascript(18%), XML, HTML, CSS, SQL, Ruby, and NSIS. Openhub says the last commit was 8 months ago but at least 40 repositories show updates from the last few hours to 3 months ago. 
+
+The core package (system of interest) is written in 
+- Java(98.3%)
+- JavaScript(0.5%)
+- XSLT(0.4%)
+- CSS (0.3%)
+- Shell(0.3%)
+- HTML(0.1%)
+- Dockerfile(0.1%).
+
+It has about 388 active contributors and the latest commit made about a week ago.
+
 ## License Summary
 
 The OpenMRS core application is licensed under the Mozilla Public License (MPL) version 2, along with a healthcare disclaimer http://openmrs.org/license.The Health-Related Additional Disclaimer of Warranty and Limitation of Liability is a tool afforded by MPL 2.0 that allows to address the specific medico-legal needs without having to modify the license itself.
