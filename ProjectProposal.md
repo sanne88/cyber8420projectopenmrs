@@ -91,6 +91,8 @@ The following diagram offers a high-level overview of the openMRS core module. S
 Ensure that these security features are addressed to maintain the security and integrity of the OpenMRS platform and safeguard patient data.
 
 ## Motivation
+Our group has chosen OpenMRS because of the importance of the security of medical records. This is an open-source medical record platform that supports the delivery of healthcare to underprivileged countries. The growing electronic medical record platform is a concept dictionary that allows for the storing and sharing of healthcare data. Each new user site can access the database structure and modify the functions without affecting the core code. OpenMRS is doing some profound work by allowing data to be easily shared where it was once impossible. The group wants to identify security vulnerabilities to mitigate the risk to patient data. 
+
 ## OSS project description
 OpenMRS is a collaborative open-source project to develop software to support the delivery of health care in developing countries. The system is designed to be usable in very resource poor environments and can be modified with the addition of new data items, forms and reports without programming. As a platform, it is intended that many organizations can adopt and modify avoiding the need to develop a system from scratch. Currently, it has around 40 packages and 500 contributors, is mostly written in Java(65%) with supporting languages of Javascript(18%), XML, HTML, CSS, SQL, Ruby, and NSIS. Openhub says the last commit was 8 months ago but at least 40 repositories show updates from the last few hours to 3 months ago. 
 
