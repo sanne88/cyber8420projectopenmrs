@@ -1,6 +1,10 @@
 # Project Proposal
 ## Team Bug Busters
 OSS Repository link: [openmrs-core](https://github.com/openmrs/openmrs-core)
+## Hypothetical Operation Environment
+
+This hypothetical operational environment for OpenMRS depicts a typical healthcare environment where the OpenMRS platform is used to handle electronic health records (EHR). It highlights the value of system integration, data security, and compliance while giving medical practitioners a user-friendly and effective tool for patient care. The application is deployed using containerization and will be deployed on a Tomcat Apache Server. OpenMRS adopted the CI tool Bamboo following the shift into the agile development process. The continuous integration tools can be accessed at http://ci.openmrs.org/.
+
 ## Systems Engineering View
 
 The following diagram offers a high-level overview of the openMRS core module. Since this package can be easily deployed as an application with minimal configuration changes, our perspective revolves around considering the application in terms of software and data as the core elements of our system of interest. We have identified enabling systems as those used in the development, deployment, and maintenance of the application. Other systems encompass third-party providers, such as insurance provider information and the payment services module.
@@ -145,10 +149,6 @@ If you are selecting an existing ticket to work on, make sure that:
    - "Guru"
 
 The developers can go from being a newcomer to the community (/dev/null) to a development expert (/dev/5) as their technical proficiency increases. The goal of the developer phases is to assist people understand where they are in their journey, inspire them to become more proficient in OpenMRS development.
-
-**Deployment**:
-
-OpenMRS adopted the CI tool Bamboo following our shift into the agile development process. The continuous integration tools can be accessed at http://ci.openmrs.org/.
 
 **Get Help**:
 
