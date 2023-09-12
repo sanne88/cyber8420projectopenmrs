@@ -193,6 +193,19 @@ Any security-related concerns can be emailed to [security@openmrs.org](mailto:se
 
 
 ## Project Planning and Reflection
-## Overall team planning and Individual Contribution
+Team Bug Busters consists of Brian, Carl, Gopinath, Sahithi, Surya, and Vidya. The team is led by Sahithi. The team members are skilled in a variety of fields, including AI, software development, and cyber security.
+
+The team members participated in multiple brainstorming sessions and discussed various open-source repositories. In the end, all members of the team unanimously agreed to work on the OpenMRS repository for this course project.
+
+All members of the team contributed to this document.
+- Brian worked on the Motivation section
+- Carl worked on the OSS Project Description section
+- Gopinath worked on Security Needs, Threats, and Features and helped put the document together.
+- Sahithi worked on the License Summary and Contributor Agreement and as a team lead organised the discussions amongst the team members.
+- Surya worked on the Security History section.
+- Vidya worked on the System Engineering View Diagram. All the team members discussed and identified the important components of the diagram.
+
+Team Bug Busters meets internally every Tuesday. The team is connected via teams.
+The Project Board can be found here: [cyber8420projectopenmrs](https://github.com/users/sanne88/projects/1)
 
 
