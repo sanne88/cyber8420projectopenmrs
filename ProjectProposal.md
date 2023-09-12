@@ -104,6 +104,7 @@ The core package (system of interest) is written in
 - Dockerfile(0.1%).
 
 It has about 388 active contributors and the latest commit made about a week ago.
+
 Documentation: [OpenMRS documentation](https://openmrs.org/documentation/) and [OpenMRS Devmanual](https://devmanual.openmrs.org/en/Technology/architecture.html)
 
 ## License Summary
