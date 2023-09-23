@@ -20,9 +20,9 @@ Usecase: This openMRS application user (Super Admin/Pharamcy User/ Patient) want
 
 Misusecase: A rogue user can crack the credentials of an user and gain access to the system.
 
-Diagram
+Diagram:
 
-![Login usecase](/UseCase_Diagrams/Login.png)
+![Login usecase](/Usecase_Diagrams/Login.png)
 
 Description:
 
