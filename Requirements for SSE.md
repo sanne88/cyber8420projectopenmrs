@@ -75,3 +75,46 @@ Upon the friend clicking the provided link, it triggers the opening of a login w
 Rob, the thief may attempt to manipulate the invite link to gain unauthorized access to sensitive information. The use of shared tokens prevents such unauthorized access by requiring the friend to possess and validate the token. Moreover, introducing an expiration time for the invite link enhances security further, ensuring that the link becomes inactive after a specified period.
 
 Additionally, depending solely on a single factor, such as email, for validation is considered less robust. To bolster security even more, the implementation of multi-factor authentication is recommended, providing an additional layer of protection against potential attacks initiated by individuals like Rob.
+
+
+### Part 2: OSS project documentation review
+We found the following documents:
+- Installation Guides 
+    - [Openmrs-core](https://github.com/openmrs/openmrs-core)
+    - [All installation guides](https://wiki.openmrs.org/display/docs/All+Installation+Guides)
+- Security related documentation
+[Security Documentation](https://wiki.openmrs.org/display/docs/Security)
+
+As an application that handles highly sensitive information, OpenMRS enforces strict security policies and practices. They have categorized their approach to security into three perspectives:
+1. OpenMRS Community Tools:
+These tools are managed by a community of OpenMRS support engineers and volunteers.
+
+2. OpenMRS Production Implementation in the Real World:
+This aspect deals with handling of OpenMRS production implementations.
+
+3. OpenMRS Community Software Project:
+This involves the actual community-maintained software through practices like code review, code scanning, role-based access control, etc.
+
+OpenMRS has a dedicated security group that works on security incidents and addresses these issues. However, ensuring security is an ongoing practice. In case of any security concerns, there are two ways to report them:
+
+1. Listing the incident on Github using Private Vulnerability Report Feature. [Learn more](https://wiki.openmrs.org/pages/viewpage.action?pageId=224526637#OpenMRSSecurity101:Policies&VulnerabilityManagement-2.AssessmentofIncident)
+2. Emailing [security@openmrs.org](mailto:security@openmrs.org)
+
+A few critical open issues that we noticed are:
+
+|Ticket|Type|Description|Created|
+|------|------|------|------|
+|[TRUNK-6155](https://issues.openmrs.org/browse/TRUNK-6155)|Task|Upgrade Liquibase|2022-12-15|
+|[TRUNK-6154](https://issues.openmrs.org/browse/TRUNK-6154)|Task|Few endpoints at the API are publicly available without any authorization|2022-12-14|
+|[TRUNK-6043](https://issues.openmrs.org/browse/TRUNK-6043)|Bug|Blind time-based SQL injection vulnerability|2021-10-29|
+|[TRUNK-6041](https://issues.openmrs.org/browse/TRUNK-6041)|Bug|Vulnerability in scripts to generate Liquibase file|2021-10-19|
+
+
+The Security Group reviews the incidents and categorizes them according to severity. Depending on the severity, appropriate actions are taken for containment, eradication, and recovery. The affected audience is notified within 5 business days or without undue delay.
+
+The documentation includes steps to secure the OpenMRS Application from various angles. Some instances where we found incomplete or no documentation include:
+1. Managing user persmissions.
+2. Maintaining Database backups.
+3. Auditing and Logging.
+4. Information about the third party dependency management.
+5. Dockerization.
