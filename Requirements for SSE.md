@@ -6,7 +6,7 @@ To generate use cases and misuse cases for our system of interest, we've underta
 
 2. **Data Management**: The system's data management capability plays a pivotal role in handling and preserving patient information efficiently and securely.
 
-3. **Patient Registration**: The patient registration feature is essential for capturing and organizing patient details, a critical aspect of healthcare record management.
+3. **Patient Sharing Records**: This feature allow patients to share their own personal health related records to another authorised person.
 
 4. **API Access**: The application's API access functionality allows for integration with external systems and services, necessitating robust security measures.
 5. **Feature5**:
@@ -36,15 +36,16 @@ To safeguard the login process during data transmission, the use of HTTPS and TL
 
 **Actor** : Super Admin
 **Use Case** :
-   1.  As a Admin , i want to merge the patient reports.
-   2.  As an Admin i want to manage the system configurations.
-**Mis Actor** : Rob , The Rogue Admin
-**Mis Use Case** :
-   1.  As a rouge superadmin ,i want to save unauthorized, falsified, or confidential patient data into the system, without the patient's consent or any legitimate medical reason.
-   2.  As a user i want to gain access to elevate privliges and collect data.
+
+1.  As a Admin , i want to merge the patient reports.
+2.  As an Admin i want to manage the system configurations.
+    **Mis Actor** : Rob , The Rogue Admin
+    **Mis Use Case** :
+3.  As a rouge superadmin ,i want to save unauthorized, falsified, or confidential patient data into the system, without the patient's consent or any legitimate medical reason.
+4.  As a user i want to gain access to elevate privliges and collect data.
 
 **Diagram** :
-![Data Management Usecase Diagram](/Usecase_Diagrams/DataManagement.png)
+![Data Management usecase](/Usecase_Diagrams/Data Management.png)
 
 **Assessment** :
 
@@ -55,3 +56,22 @@ To counter these threats, the current system incorporates role-based access cont
 The system permits superadmins to upload or download data, which could pose a security risk. To address this, implementing a global data privacy policy that requires user consent before any data upload or download activity can mitigate data collection attacks.
 
 Furthermore, an extra layer of security can be introduced to the system, requiring additional approval for critical actions, such as managing system configurations or attempting to gain superadmin access. Implementing a multifactor access code can help prevent data tampering attacks in such scenarios.
+
+### 1.3 Patient Sharing Records:
+**Use Case:**
+A patient shares his/her own personal records with his/her own friend.
+
+**Misuse Case:**
+Rob, the thief can manipulate the invite link received by an innocent user to steal his/her sensitive information.
+
+**Diagram** :
+![Sharing Records](/Usecase_Diagrams/SharingRecords.png)
+
+**Assessment:**
+In this scenario where a patient intends to share their personal medical records with a trusted friend, the process involves initiating a new relationship within the system. This involves providing essential information about the friend, including their name, email address, and the nature of their relationship with the patient. Subsequently, an invite link is generated, embedding a secure shared token, and sent to the designated friend.
+
+Upon the friend clicking the provided link, it triggers the opening of a login window, preloaded with the shared token. At this point, two actions become possible: the friend can either log into the system if they are already an existing user, or they can proceed with the sign-up process. In either case, the shared token must be authenticated before any access to the system is granted.
+
+Rob, the thief may attempt to manipulate the invite link to gain unauthorized access to sensitive information. The use of shared tokens prevents such unauthorized access by requiring the friend to possess and validate the token. Moreover, introducing an expiration time for the invite link enhances security further, ensuring that the link becomes inactive after a specified period.
+
+Additionally, depending solely on a single factor, such as email, for validation is considered less robust. To bolster security even more, the implementation of multi-factor authentication is recommended, providing an additional layer of protection against potential attacks initiated by individuals like Rob.
