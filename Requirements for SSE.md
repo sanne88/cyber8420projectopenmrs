@@ -20,14 +20,14 @@ For each of these features, we have created comprehensive use case and misuse ca
 **Use Case**  : 
    1. As a Admin , i want to merge the patient reports. 
    2. As an Admin i want to manage the system configurations.
- **Mis Actor** : Rob , The Rogue Admin
-  **Mis Use Case** : 
+**Mis Actor** : Rob , The Rogue Admin
+**Mis Use Case** : 
    1. As a rouge superadmin ,i want to save unauthorized, falsified, or confidential patient data into the system, without         the patient's consent or any legitimate medical reason.
    2. As a user i want to gain access to elevate privliges and collect data.
 
- **Diagram**  :
+**Diagram**  :
 
- **Description** :
+**Description** :
  
 The core component of OpenMRS plays a pivotal role in the system, enabling superadmins to manage system configurations, merge patient reports, and oversee patient data. However, this critical functionality also presents a potential vulnerability, as rogue administrators could exploit it for data tampering or unauthorized data collection.
 
