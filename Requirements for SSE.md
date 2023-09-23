@@ -45,8 +45,9 @@ To safeguard the login process during data transmission, the use of HTTPS and TL
 4.  As a user i want to gain access to elevate privliges and collect data.
 
 **Diagram** :
+![Data Management usecase](/Usecase_Diagrams/Data Management.png)
 
-**Description** :
+**Assessment** :
 
 The core component of OpenMRS plays a pivotal role in the system, enabling superadmins to manage system configurations, merge patient reports, and oversee patient data. However, this critical functionality also presents a potential vulnerability, as rogue administrators could exploit it for data tampering or unauthorized data collection.
 
