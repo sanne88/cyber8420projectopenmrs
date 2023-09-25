@@ -36,16 +36,17 @@ To safeguard the login process during data transmission, the use of HTTPS and TL
 
 **Actor** : Super Admin
 **Use Case** :
-
 1.  As a Admin , i want to merge the patient reports.
 2.  As an Admin i want to manage the system configurations.
-    **Mis Actor** : Rob , The Rogue Admin
-    **Mis Use Case** :
-3.  As a rouge superadmin ,i want to save unauthorized, falsified, or confidential patient data into the system, without the patient's consent or any legitimate medical reason.
-4.  As a user i want to gain access to elevate privliges and collect data.
+   
+**Mis Actor** : Rob , The Rogue Admin
+
+**Mis Use Case** :
+1.  As a rouge superadmin ,i want to save unauthorized, falsified, or confidential patient data into the system, without the patient's consent or any legitimate medical reason.
+2.  As a user i want to gain access to elevate privliges and collect data.
 
 **Diagram** :
-![Data Management usecase](/Usecase_Diagrams/Data Management.png)
+![Data Management usecase](/Usecase_Diagrams/DataManagement.png)
 
 **Assessment** :
 
