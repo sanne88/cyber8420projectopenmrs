@@ -9,7 +9,9 @@ To generate use cases and misuse cases for our system of interest, we've underta
 3. **Patient Sharing Records**: This feature allow patients to share their own personal health related records to another authorised person.
 
 4. **API Access**: The application's API access functionality allows for integration with external systems and services, necessitating robust security measures.
-5. **Feature5**:
+
+5. **Session Management**: This feature mitigates session replays, cross-site forgery, and tcp session hijacks on the network.
+   
 6. **Feature6**:
 
 For each of these features, we have created comprehensive use case and misuse case diagrams. These diagrams not only outline the existing functionalities of the system but also incorporate essential security considerations. These security measures are designed to preemptively address potential vulnerabilities and possible attacks, thereby ensuring the integrity and confidentiality of the system's data and operations.
@@ -103,6 +105,37 @@ Rate Limiting: By restricting the frequency of requests to the API within specif
 Secure Hash Functions: These cryptographic functions ensure that data, especially sensitive data, is encrypted, thus safeguarding it from prying eyes or unauthorized access.
 
 If Rob, or any other malicious actor, attempts to compromise the system using techniques like SQL injection, denial-of-service attacks, or inducing data corruption, our layered security approach—including Encoding URI Parameter, Rate Limiting, and Secure Hash Functions—will serve as a robust shield, significantly reducing the risk of breaches.
+
+### 1.4 Insurance Provider User :
+**Use Case**
+The primary function of this Insurance Provider Use Case is to show session management features that can mitigate certain Session Hijacking Attacks.
+
+**Misuse Case**
+There exists a potential threat in the form of Hacker who wants to capture a session to get personal medical data to sell. Hacker's capabilities include re-using session IDs, sending malicious scripts to the Insurance Provider User, and hijacking a session on the network level by trying to guess the correct packet numbers and send their malicious packets.
+
+**Diagram**
+![Insurance Provider Usercase #1](/Usecase_Diagrams/SessionReplay.PNG)
+![Insurance Provider Usercase #2](/Usecase_Diagrams/Cross-SiteForgery.PNG)
+![Insurance Provider Usercase #3](/Usecase_Diagrams/TCPSessionHijack.PNG)
+
+
+**Assessment:**
+Assessment: In these scenarios, if the hacker tries to re-use session IDs, send malicious scripts to the Insurance Provider User, or hijack a session on the network level, several protective measures are already in place. These measures encompass:
+
+Encrypt Session IDs and Session Data: This will make it harder for Hacker to gain access to the session.
+
+Regenerate Session IDs on Login: For each login a new session ID is generated making it harder for Hacker to gain access to re-use session IDs.
+
+Configure proper Session timeout: As the user in this case may leave a session open this feature helps end a session sooner than later thus signing out Hacker and lessening the time Hacker has to carry out their attack.
+
+Invalidate Session ID on Logout: Doing so disallows Hacker to use a previous captured session.
+
+Set HTTPOnly Attribute in Header: Hacker will not have the ability to access cookies from client-side scripts thus mitigating cross-site forgery.
+
+Webserver: Can detect if packets are out of order through sequence numbers and if detected will restart a new session or even close the connection. 
+
+If Hackers tries to re-use session ids, send malicious script, or try to guess the correct order of packets so they can send their malicious packets, the included features can significantly reducing the risk of breaches.
+
 
 
 ### Part 2: OSS project documentation review
