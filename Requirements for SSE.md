@@ -106,29 +106,31 @@ Secure Hash Functions: These cryptographic functions ensure that data, especiall
 
 If Rob, or any other malicious actor, attempts to compromise the system using techniques like SQL injection, denial-of-service attacks, or inducing data corruption, our layered security approach—including Encoding URI Parameter, Rate Limiting, and Secure Hash Functions—will serve as a robust shield, significantly reducing the risk of breaches.
 
-### 1.5 Insurance Provider User :
+### 1.5 Session Management :
 **Use Case**
-The primary function of this Insurance Provider Use Case is to show session management features that can mitigate certain Session Hijacking Attacks.
+This openMRS application user (Super Admin/Pharmacy User/ Patient) wants to login to the system.
 
 **Misuse Case**
 There exists a potential threat in the form of Hacker who wants to capture a session to get personal medical data to sell. Hacker's capabilities include re-using session IDs, sending malicious scripts to the Insurance Provider User, and hijacking a session on the network level by trying to guess the correct packet numbers and send their malicious packets.
 
-Diagrams:
+**Diagrams:**
 
 
-![Insurance Provider Usercase #1](/Usecase_Diagrams/SessionReplay.PNG)
-![Insurance Provider Usercase #2](/Usecase_Diagrams/Cross-SiteForgery.PNG)
+
+![Insurance Provider Usercase #1](/Usecase_Diagrams/Replay.PNG)
+![Insurance Provider Usercase #2](/Usecase_Diagrams/CSRF.PNG)
 ![Insurance Provider Usercase #3](/Usecase_Diagrams/TCPSessionHijack.PNG)
 
 
-**Assessment:**
-Assessment: In these scenarios, if the hacker tries to re-use session IDs, send malicious scripts to the Insurance Provider User, or hijack a session on the network level, several protective measures are already in place. These measures encompass:
+
+**Assessment:** 
+Assessment: In these scenarios, if the hacker tries to re-use session IDs, send malicious scripts to the User, or hijack a session on the network level, several protective measures are already in place. These measures encompass:
 
 Encrypt Session IDs and Session Data: This will make it harder for Hacker to gain access to the session.
 
 Regenerate Session IDs on Login: For each login a new session ID is generated making it harder for Hacker to gain access to re-use session IDs.
 
-Configure proper Session timeout: As the user in this case may leave a session open this feature helps end a session sooner than later thus signing out Hacker and lessening the time Hacker has to carry out their attack.
+Configure proper Session timeout: As the user in this case may leave a session open this feature helps end a session sooner than later thus signing out Hacker and lessening the time Hacker has to carry out an attack.
 
 Invalidate Session ID on Logout: Doing so disallows Hacker to use a previous captured session.
 
