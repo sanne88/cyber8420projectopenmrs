@@ -106,14 +106,16 @@ Secure Hash Functions: These cryptographic functions ensure that data, especiall
 
 If Rob, or any other malicious actor, attempts to compromise the system using techniques like SQL injection, denial-of-service attacks, or inducing data corruption, our layered security approach—including Encoding URI Parameter, Rate Limiting, and Secure Hash Functions—will serve as a robust shield, significantly reducing the risk of breaches.
 
-### 1.4 Insurance Provider User :
+### 1.5 Insurance Provider User :
 **Use Case**
 The primary function of this Insurance Provider Use Case is to show session management features that can mitigate certain Session Hijacking Attacks.
 
 **Misuse Case**
 There exists a potential threat in the form of Hacker who wants to capture a session to get personal medical data to sell. Hacker's capabilities include re-using session IDs, sending malicious scripts to the Insurance Provider User, and hijacking a session on the network level by trying to guess the correct packet numbers and send their malicious packets.
 
-**Diagram**
+Diagrams:
+
+
 ![Insurance Provider Usercase #1](/Usecase_Diagrams/SessionReplay.PNG)
 ![Insurance Provider Usercase #2](/Usecase_Diagrams/Cross-SiteForgery.PNG)
 ![Insurance Provider Usercase #3](/Usecase_Diagrams/TCPSessionHijack.PNG)
