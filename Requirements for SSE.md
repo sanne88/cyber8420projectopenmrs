@@ -111,7 +111,7 @@ If Rob, or any other malicious actor, attempts to compromise the system using te
 This openMRS application user (Super Admin/Pharmacy User/ Patient) wants to login to the system.
 
 **Misuse Case**
-There exists a potential threat in the form of Hacker who wants to capture a session to get personal medical data to sell. Hacker's capabilities include re-using session IDs, sending malicious scripts to the Insurance Provider User, and hijacking a session on the network level by trying to guess the correct packet numbers and send their malicious packets.
+There exists a potential threat in the form of Hacker who wants to capture a session to get personal medical data to sell. Hacker's capabilities include re-using session IDs, sending malicious scripts to the User, and hijacking a session on the network level by trying to guess the correct packet numbers and send their malicious packets.
 
 **Diagrams:**
 
