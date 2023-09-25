@@ -76,6 +76,31 @@ Rob, the thief may attempt to manipulate the invite link to gain unauthorized ac
 
 Additionally, depending solely on a single factor, such as email, for validation is considered less robust. To bolster security even more, the implementation of multi-factor authentication is recommended, providing an additional layer of protection against potential attacks initiated by individuals like Rob.
 
+### 1.4 API User :
+**Use Case**
+The primary function of this API use case is to efficiently fetch or retrieve information regarding patients and staff.
+
+**Misuse Case**
+There exists a potential threat in the form of Rob, an ill-intentioned thief. Rob's capabilities include manipulating the system and deploying various attack techniques with the intention of accessing unauthorized transactions, confidential patient records, and other sensitive data.
+
+**Diagram**
+![API User Usercase](/Usecase_Diagrams/API_User.png)
+
+**Assessment:**
+Assessment: In the delineated scenario, when an API user attempts to either fetch or store data related to financial transactions, staff particulars, or patient details, several protective measures are already in place. These measures encompass:
+
+Parameterized Queries: These serve as the system's primary defence mechanism, safeguarding data against malicious input or injections.
+Availability, Checksums, and Hashes: These mechanisms ensure data integrity and system uptime, verifying that the fetched or stored information remains uncompromised.
+
+To bolster security further, additional enhancements are being incorporated:
+
+Encoding URI Parameter: Integrated primarily to fortify parameterized queries, this feature prevents the potential confusion or misinterpretation of characters within URLs.
+Such a step is crucial in averting certain attack vectors that exploit URL vulnerabilities.
+Rate Limiting: By restricting the frequency of requests to the API within specified time frames, this feature helps in preventing overloads or potential denial-of-service (DoS) attacks.
+Secure Hash Functions: These cryptographic functions ensure that data, especially sensitive data, is encrypted, thus safeguarding it from prying eyes or unauthorized access.
+
+If Rob, or any other malicious actor, attempts to compromise the system using techniques like SQL injection, denial-of-service attacks, or inducing data corruption, our layered security approach—including Encoding URI Parameter, Rate Limiting, and Secure Hash Functions—will serve as a robust shield, significantly reducing the risk of breaches.
+
 
 ### Part 2: OSS project documentation review
 We found the following documents:
