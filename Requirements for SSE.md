@@ -96,7 +96,9 @@ To bolster security further, additional enhancements are being incorporated:
 
 Encoding URI Parameter: Integrated primarily to fortify parameterized queries, this feature prevents the potential confusion or misinterpretation of characters within URLs.
 Such a step is crucial in averting certain attack vectors that exploit URL vulnerabilities.
+
 Rate Limiting: By restricting the frequency of requests to the API within specified time frames, this feature helps in preventing overloads or potential denial-of-service (DoS) attacks.
+
 Secure Hash Functions: These cryptographic functions ensure that data, especially sensitive data, is encrypted, thus safeguarding it from prying eyes or unauthorized access.
 
 If Rob, or any other malicious actor, attempts to compromise the system using techniques like SQL injection, denial-of-service attacks, or inducing data corruption, our layered security approach—including Encoding URI Parameter, Rate Limiting, and Secure Hash Functions—will serve as a robust shield, significantly reducing the risk of breaches.
