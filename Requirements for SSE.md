@@ -90,7 +90,7 @@ There exists a potential threat in the form of Rob, an ill-intentioned thief. Ro
 ![API User Usercase](/Usecase_Diagrams/API_User.png)
 
 **Assessment:**
-Assessment: In the delineated scenario, when an API user attempts to either fetch or store data related to financial transactions, staff particulars, or patient details, several protective measures are already in place. These measures encompass:
+In the delineated scenario, when an API user attempts to either fetch or store data related to financial transactions, staff particulars, or patient details, several protective measures are already in place. These measures encompass:
 
 Parameterized Queries: These serve as the system's primary defence mechanism, safeguarding data against malicious input or injections.
 Availability, Checksums, and Hashes: These mechanisms ensure data integrity and system uptime, verifying that the fetched or stored information remains uncompromised.
@@ -140,6 +140,12 @@ Webserver: Can detect if packets are out of order through sequence numbers and i
 
 If Hackers tries to re-use session ids, send malicious script, or try to guess the correct order of packets so they can send their malicious packets, the included features can significantly reducing the risk of breaches.
 
+**Project Reflection**
+The system's login feature goes beyond simple access; it's meticulously designed to protect user data and ensure system integrity. When inputting a password, the system amplifies its security by adding a "salt", a randomized set of characters, complicating potential unauthorized access. Emphasizing password strength and regular changes further fortifies this barrier. Advanced encryption techniques, including HTTPS, maintain the confidentiality of transmitted data, thwarting eavesdroppers.
+The super admin oversees and processes crucial data. GDPR guidelines are strictly followed for data management, and advanced AES encryption secures sensitive details like patient reports. Additionally, constant monitoring detects and addresses suspicious activities.
+Patients sharing medical records with friends involves a unique, time-sensitive link sent to the designated recipient. This link, along with additional recommended authentication steps, ensures only the intended party accesses the records, reducing potential risks of unauthorized access.
+Interactions with our API, particularly concerning financial or personal data, are safeguarded against harmful inputs with parameterized queries. Data integrity is maintained using checksums and hashes, ensuring both its authenticity and optimal system performance.
+Session management is dynamic, with each login generating a unique session ID, and automatic timeouts to counteract potential negligence. Post-logout, the session is rendered obsolete. Protective measures, including barriers against cookie manipulation and vigilant system monitoring, stave off malicious activities. Given these comprehensive measures, OpenMRS demonstrates a commitment to data security throughout its lifecycle, positioning it at the forefront of industry best practices
 
 
 ### Part 2: OSS project documentation review
