@@ -187,7 +187,7 @@ The documentation includes steps to secure the OpenMRS Application from various 
 ### Part 2: Project Reflection and Planning
 Team Bug Busters consists of Brian, Carl, Gopinath, Sahithi, Surya, and Vidya. The team is led by Sahithi.
 
-Individual Contributions:
+**Individual Contributions:**
 - Brian 
 - Carl was responsible for working on Session hijacking, XSS attacks, and CSRF attacks, including use cases, misuse cases, and assessments.
 - Gopinath concentrated on the Login scenario, with a focus on credential theft use cases, misuse cases, and assessments. He also made contributions to the OSS project documentation and reviewed other teammates' use cases, providing valuable suggestions.
@@ -195,14 +195,14 @@ Individual Contributions:
 - Surya focused on the scenario involving patients sharing their records, specifically the Identify theft use case, misuse case, and assessment. She also contributed to the OSS project documentation and the Project Reflection and Planning sections. Additionally, Surya reviewed her teammates' use cases and provided valuable suggestions.
 - Vidya worked on the API User scenario, concentrating on various attack use cases, misuse cases, and assessments. Additionally, she worked on Part-1 of the Reflection section.
 
-What we did well:
+**What we did well:**
 - Dedicated Efforts: Each team member invested significant effort in developing the use cases. This required extensive research into numerous documents and the OpenMRS core source code.
 
 - Comprehensive Understanding: Our collective efforts allowed us to gain a thorough understanding of various potential attacks on the application. We conducted in-depth analyses of each attack, evaluating its relevance to the system.
 
 - New Perspectives: Exploring the concept of misuse offered us a fresh perspective. It prompted us to question the system's existing design and think about how it could be further secured.
 
-What we can improve:
+**What we can improve:**
 - Communication Channel: To enhance our collaboration, we should collectively decide on a communication platform for both formal and informal discussions. At present, our inconsistency in choosing between Canvas and Teams for these different types of communication is causing some confusion and occasional miscommunications.
 
 - Advanced Scheduling: We need to schedule our calls further in advance. This will provide all team members with adequate time to prepare and contribute effectively to our discussions.
