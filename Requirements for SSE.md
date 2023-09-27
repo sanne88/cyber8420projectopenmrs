@@ -210,7 +210,7 @@ The documentation includes steps to secure the OpenMRS Application from various 
 Team Bug Busters consists of Brian, Carl, Gopinath, Sahithi, Surya, and Vidya. The team is led by Sahithi.
 
 **Individual Contributions:**
-- Brian 
+- Brian was responsible for insider threat, and password authentication, including use cases, misuse cases, and assessments. 
 - Carl was responsible for working on Session hijacking, XSS attacks, and CSRF attacks, including use cases, misuse cases, and assessments.
 - Gopinath concentrated on the Login scenario, with a focus on credential theft use cases, misuse cases, and assessments. He also made contributions to the OSS project documentation and reviewed other teammates' use cases, providing valuable suggestions.
 - Sahithi handled the Super Admin Data management use case, misuse case, and assessment. She also contributed to the OSS project documentation and the Project Reflection and Planning sections. Furthermore, she reviewed her teammates' use cases and offered valuable suggestions. Sahithi took charge of managing the project board, breaking down tasks into smaller components, and creating tickets for this exercise. She also organized internal team meetings.
