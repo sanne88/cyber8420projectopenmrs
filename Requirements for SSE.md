@@ -1,4 +1,4 @@
-### Part1: Use/Misuse Case Analysis
+### Part-1: Use/Misuse Case Analysis
 
 To generate use cases and misuse cases for our system of interest, we've undertaken an in-depth analysis of the openMRS application software. This analysis involved the identification of the core system features along with the associated actors and enabling systems. We've identified six main features as the focal points of our analysis:
 
@@ -18,15 +18,15 @@ For each of these features, we have created comprehensive use case and misuse ca
 
 ### 1.1 Login Usecase:
 
-Usecase: This openMRS application user (Super Admin/Pharamcy User/ Patient) wants to login to the system.
+**Usecase**: This openMRS application user (Super Admin/Pharamcy User/ Patient) wants to login to the system.
 
-Misusecase: A rogue user can crack the credentials of an user and gain access to the system.
+**Misusecase**: A rogue user can crack the credentials of an user and gain access to the system.
 
-Diagram:
+**Diagram**:
 
 ![Login usecase](/Usecase_Diagrams/Login.png)
 
-Description:
+**Assessment**:
 
 The assessment for the login use case within our system places a strong emphasis on security and robust credential protection. In this use case, the process of logging in involves a multi-layered security approach. Firstly, when a user's password is entered, it undergoes encryption, which incorporates an added layer of security by introducing a random salt before hashing the password. This method significantly strengthens the password and serves as a vital deterrent against brute force and rainbow attacks.
 
@@ -37,13 +37,13 @@ To safeguard the login process during data transmission, the use of HTTPS and TL
 ### Data Management
 
 **Actor** : Super Admin
-**Use Case** :
+**Usecase** :
 1.  As a Admin , i want to merge the patient reports.
 2.  As an Admin i want to manage the system configurations.
    
-**Mis Actor** : Rob , The Rogue Admin
+**Misactor** : Rob , The Rogue Admin
 
-**Mis Use Case** :
+**Misusecase** :
 1.  As a rouge superadmin ,i want to save unauthorized, falsified, or confidential patient data into the system, without the patient's consent or any legitimate medical reason.
 2.  As a user i want to gain access to elevate privliges and collect data.
 
@@ -61,16 +61,17 @@ The system permits superadmins to upload or download data, which could pose a se
 Furthermore, an extra layer of security can be introduced to the system, requiring additional approval for critical actions, such as managing system configurations or attempting to gain superadmin access. Implementing a multifactor access code can help prevent data tampering attacks in such scenarios.
 
 ### 1.3 Patient Sharing Records:
-**Use Case:**
+**Usecase:**
 A patient shares his/her own personal records with his/her own friend.
 
-**Misuse Case:**
+**Misusecase:**
 Rob, the thief can manipulate the invite link received by an innocent user to steal his/her sensitive information.
 
 **Diagram** :
 ![Sharing Records](/Usecase_Diagrams/SharingRecords.png)
 
 **Assessment:**
+
 In this scenario where a patient intends to share their personal medical records with a trusted friend, the process involves initiating a new relationship within the system. This involves providing essential information about the friend, including their name, email address, and the nature of their relationship with the patient. Subsequently, an invite link is generated, embedding a secure shared token, and sent to the designated friend.
 
 Upon the friend clicking the provided link, it triggers the opening of a login window, preloaded with the shared token. At this point, two actions become possible: the friend can either log into the system if they are already an existing user, or they can proceed with the sign-up process. In either case, the shared token must be authenticated before any access to the system is granted.
@@ -80,16 +81,17 @@ Rob, the thief may attempt to manipulate the invite link to gain unauthorized ac
 Additionally, depending solely on a single factor, such as email, for validation is considered less robust. To bolster security even more, the implementation of multi-factor authentication is recommended, providing an additional layer of protection against potential attacks initiated by individuals like Rob.
 
 ### 1.4 API User :
-**Use Case**
+**Usecase**
 The primary function of this API use case is to efficiently fetch or retrieve information regarding patients and staff.
 
-**Misuse Case**
+**Misusecase**
 There exists a potential threat in the form of Rob, an ill-intentioned thief. Rob's capabilities include manipulating the system and deploying various attack techniques with the intention of accessing unauthorized transactions, confidential patient records, and other sensitive data.
 
 **Diagram**
 ![API User Usercase](/Usecase_Diagrams/API_User.png)
 
 **Assessment:**
+
 In the delineated scenario, when an API user attempts to either fetch or store data related to financial transactions, staff particulars, or patient details, several protective measures are already in place. These measures encompass:
 
 Parameterized Queries: These serve as the system's primary defence mechanism, safeguarding data against malicious input or injections.
@@ -107,10 +109,10 @@ Secure Hash Functions: These cryptographic functions ensure that data, especiall
 If Rob, or any other malicious actor, attempts to compromise the system using techniques like SQL injection, denial-of-service attacks, or inducing data corruption, our layered security approach—including Encoding URI Parameter, Rate Limiting, and Secure Hash Functions—will serve as a robust shield, significantly reducing the risk of breaches.
 
 ### 1.5 Session Management :
-**Use Case**
+**Usecase:**
 This openMRS application user (Super Admin/Pharmacy User/ Patient) wants to login to the system.
 
-**Misuse Case**
+**Misusecase:**
 There exists a potential threat in the form of Hacker who wants to capture a session to get personal medical data to sell. Hacker's capabilities include re-using session IDs, sending malicious scripts to the User, and hijacking a session on the network level by trying to guess the correct packet numbers and send their malicious packets.
 
 **Diagrams:**
@@ -124,6 +126,7 @@ There exists a potential threat in the form of Hacker who wants to capture a ses
 
 
 **Assessment:** 
+
 Assessment: In these scenarios, if the hacker tries to re-use session IDs, send malicious scripts to the User, or hijack a session on the network level, several protective measures are already in place. These measures encompass:
 
 Encrypt Session IDs and Session Data: This will make it harder for Hacker to gain access to the session.
@@ -141,13 +144,13 @@ Webserver: Can detect if packets are out of order through sequence numbers and i
 If Hackers tries to re-use session ids, send malicious script, or try to guess the correct order of packets so they can send their malicious packets, the included features can significantly reducing the risk of breaches.
 
 ### 1.6 Insider Threat :
-**Use Case**
+**Usecase:**
 Gives access for users to patient data to allow treatment and care for patient
 
-**Misuse Case**
+**Misusecase:**
 Malicious employee gains access to patient data and information through password sharing and access controls.
 
-**Diagrams:**
+**Diagram:**
 
 
 ![Doctor Usercase](/Usecase_Diagrams/InsiderThreat.png)
@@ -155,16 +158,17 @@ Malicious employee gains access to patient data and information through password
 
 
 **Assessment:** 
+
 In this scenario, a malicious employee is trying to gain access to patient data and information. There are two modes of attack by the malicious employee: password sharing and using their own access.
 Doctor's role is the safety and care of patients. Due to their access and control of patient information, it is important to include safety measures from other employees. The primary mode of attack would be password sharing. To initially prevent this policies and training would show the importance of password security. Multifactor authentication would add another layer of security that would require the user another credential to access the account. By adding additional questions or a phone app this would prevent access to user accounts by the malicious employee.
 The secondary mode of attack would be the access controls allowed to the malicious employee. To mitigate the information accessed by employees should be notified that all information accessed can be tracked by audit trails. To prevent the malicious employee form accessing the wrong information permissions should be added to patient data, only allowing certain personnel to have access. 
 
 
-**Reflection on security requirements**
-Overall, our analysis of the openMRS application suggests that the application as a whole has security measures in place. Starting with the login feature, we noticed that the system recommends an optional password strength policy coupled with a security question. But, we recommend mandating  the password strength policy and having an additional security question. The rest of the security requirements for login such as password encryption with hash and a salt, user retirement, and password expiration are already in place to prevent commonly known attacks. Although the system does not include multifactor authentication, we noticed that for a priveleged access it becomes prevelant and can act as the core security requirement. In addition to MFA, we also recommend implementing a global data privacy policy that requires user consent before any data upload or download activity is performed. Furthermore, an extra layer of security can be introduced to the system such as using a PIN to verify identity before performing critical actions. Another observation on patient record sharing led us to believe that it is necessary to have MFA and expiration time for the invite link.API is still available and most of the features are openly available which can be validated because this will cause an open source vulnerable .In session Management,it would better if there is continuous monitoring is done and clearing cache after every logout is always recommended.
+### Part-1 Reflection on security requirements
+Overall, our analysis of the openMRS application suggests that the application as a whole has security measures in place. Starting with the login feature, we noticed that the system recommends an optional password strength policy coupled with a security question. But, we recommend mandating  the password strength policy and having an additional security question. The rest of the security requirements for login such as password encryption with hash and a salt, user retirement, and password expiration are already in place to prevent commonly known attacks. Although the system does not include multifactor authentication, we noticed that for a priveleged access it becomes prevelant and can act as the core security requirement. In addition to MFA, we also recommend implementing a global data privacy policy that requires user consent before any data upload or download activity is performed. Furthermore, an extra layer of security can be introduced to the system such as using a PIN to verify identity before performing critical actions. Another observation on patient record sharing led us to believe that it is necessary to have MFA and expiration time for the invite link. API is still available and most of the features are openly available which can be validated because this will cause an open source vulnerable. In session Management, it would better if there is continuous monitoring is done and clearing cache after every logout is always recommended.
 
 
-### Part 2: OSS project documentation review
+### Part-2 OSS project documentation review
 We found the following documents:
 - Installation Guides 
     - [Openmrs-core](https://github.com/openmrs/openmrs-core)
@@ -206,7 +210,7 @@ The documentation includes steps to secure the OpenMRS Application from various 
 4. Information about the third party dependency management.
 5. Dockerization.
 
-### Part 2: Project Reflection and Planning
+### Part-2 Project Reflection and Planning
 Team Bug Busters consists of Brian, Carl, Gopinath, Sahithi, Surya, and Vidya. The team is led by Sahithi.
 
 **Individual Contributions:**
