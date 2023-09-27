@@ -150,7 +150,7 @@ Malicious employee gains access to patient data and information through password
 **Diagrams:**
 
 
-![Doctor Usercase](/Usecase_Diagrams/InsiderThreat.PNG)
+![Doctor Usercase](/Usecase_Diagrams/InsiderThreat.png)
 
 
 
