@@ -37,6 +37,7 @@ To safeguard the login process during data transmission, the use of HTTPS and TL
 ### Data Management
 
 **Actor** : Super Admin
+
 **Usecase** :
 1.  As a Admin , i want to merge the patient reports.
 2.  As an Admin i want to manage the system configurations.
