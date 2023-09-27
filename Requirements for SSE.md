@@ -12,7 +12,7 @@ To generate use cases and misuse cases for our system of interest, we've underta
 
 5. **Session Management**: This feature mitigates session replays, cross-site forgery, and tcp session hijacks on the network.
    
-6. **Feature6**:
+6. **Mitigate Insider Threats**: Implement access controls and audit trails to monitor user actions.
 
 For each of these features, we have created comprehensive use case and misuse case diagrams. These diagrams not only outline the existing functionalities of the system but also incorporate essential security considerations. These security measures are designed to preemptively address potential vulnerabilities and possible attacks, thereby ensuring the integrity and confidentiality of the system's data and operations.
 
@@ -139,6 +139,26 @@ Set HTTPOnly Attribute in Header: Hacker will not have the ability to access coo
 Webserver: Can detect if packets are out of order through sequence numbers and if detected will restart a new session or even close the connection. 
 
 If Hackers tries to re-use session ids, send malicious script, or try to guess the correct order of packets so they can send their malicious packets, the included features can significantly reducing the risk of breaches.
+
+### 1.6 Insider Threat :
+**Use Case**
+Gives access for users to patient data to allow treatment and care for patient
+
+**Misuse Case**
+Malicious employee gains access to patient data and information through password sharing and access controls.
+
+**Diagrams:**
+
+
+![Doctor Usercase](/Usecase_Diagrams/InsiderThreat.PNG)
+
+
+
+**Assessment:** 
+In this scenario, a malicious employee is trying to gain access to patient data and information. There are two modes of attack by the malicious employee: password sharing and using their own access.
+Doctor's role is the safety and care of patients. Due to their access and control of patient information, it is important to include safety measures from other employees. The primary mode of attack would be password sharing. To initially prevent this policies and training would show the importance of password security. Multifactor authentication would add another layer of security that would require the user another credential to access the account. By adding additional questions or a phone app this would prevent access to user accounts by the malicious employee.
+The secondary mode of attack would be the access controls allowed to the malicious employee. To mitigate the information accessed by employees should be notified that all information accessed can be tracked by audit trails. To prevent the malicious employee form accessing the wrong information permissions should be added to patient data, only allowing certain personnel to have access. 
+
 
 **Reflection on security requirements**
 Overall, our analysis of the openMRS application suggests that the application as a whole has security measures in place. Starting with the login feature, we noticed that the system recommends an optional password strength policy coupled with a security question. But, we recommend mandating  the password strength policy and having an additional security question. The rest of the security requirements for login such as password encryption with hash and a salt, user retirement, and password expiration are already in place to prevent commonly known attacks. Although the system does not include multifactor authentication, we noticed that for a priveleged access it becomes prevelant and can act as the core security requirement. In addition to MFA, we also recommend implementing a global data privacy policy that requires user consent before any data upload or download activity is performed. Furthermore, an extra layer of security can be introduced to the system such as using a PIN to verify identity before performing critical actions. Another observation on patient record sharing led us to believe that it is necessary to have MFA and expiration time for the invite link.API is still available and most of the features are openly available which can be validated because this will cause an open source vulnerable .In session Management,it would better if there is continuous monitoring is done and clearing cache after every logout is always recommended.
