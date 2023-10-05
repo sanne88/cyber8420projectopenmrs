@@ -1,4 +1,4 @@
-### 1.1 Assurance Case #1:
+### 1.1 Login Session Hijack Assurance Case #1:
 
 **Diagram**:
 
