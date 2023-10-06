@@ -122,7 +122,7 @@ There exists a potential threat in the form of Hacker who wants to capture a ses
 
 ![Insurance Provider Usercase #1](/Usecase_Diagrams/Replay.PNG)
 ![Insurance Provider Usercase #2](/Usecase_Diagrams/CSRF.PNG)
-![Insurance Provider Usercase #3](/Usecase_Diagrams/TCP.PNG)
+![Insurance Provider Usercase #3](/Usecase_Diagrams/TCPSessionHijack.PNG)
 
 
 
