@@ -2,6 +2,7 @@
 
 1. Login - Session hijack
 2. Data Management
+3. Patient Sharing Records
 
 ### Part-1: Breadth and Depth of Assurance Arguments:
 
@@ -18,6 +19,20 @@ This top-level claim starts by OpenMRS minimizing the theft of session cookies w
 ### 1.2 Data Management Assurance Case #2:
 **Diagram**:
 **Assessment**:
+
+### 1.3 Patient Sharing Records Assurance Case:
+**Diagram**:
+
+![Assurance_Case_3](/AssuranceCases_Diagrams/SharingRecords_AssuranceCase.png)
+
+**Assessment**:
+
+In OpenMRS, patients can grant access to trusted individuals to view and access their records. The process begins with patients identifying whom they want to share their details with. Patients are required to provide the name, relationship type, and email address of the trusted person. Once this information is collected, an invitation link embedded with a shared token is sent to the trusted person. The top-level claim asserts that OpenMRS minimizes the risk of this invitation link being tampered with. 
+	
+However, potential issues include the link being manipulated by a hacker or an unauthorized person gaining access to the email, or the shared token being guessed through a brute force attack. These concerns are addressed through counterarguments supported by evidence:
+- The shared tokens have a validity period of only 10 minutes. This information was verified from the code repository.
+- Authentication and Validation: OpenMRS delegates authentication to OAuth 2.0. This fact was noticed in the code, and supporting documents were found to substantiate this claim. 
+- Additionally, the shared tokens are securely stored in the phr_sharing_token table and transmitted in encrypted forms
 
 ###  Part-2 Evidence Alignment Observations:
 ### Planning & Reflection

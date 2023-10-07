@@ -9,3 +9,5 @@
 
 ## Table of Contents
 1. [Project Proposal](./ProjectProposal.md)
+2. [Software Security Engineering](<./Requirements for SSE.md>)
+1. [Assurance Cases](./AssuranceCases-SoftwareSecurityEngineering.md)
