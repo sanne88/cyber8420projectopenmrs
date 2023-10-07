@@ -20,7 +20,7 @@ This top-level claim starts by OpenMRS minimizing the theft of session cookies w
 
 **Diagram**:
 
-![Assurance_Case_2](/AssuranceCases_Diagrams/Data Management Assurnace Case diagram.drawio.png).
+![Assurance_Case_2](/AssuranceCases_Diagrams/DataManagement_AssurnaceCase.png)
 
 **Assessment**:
 
