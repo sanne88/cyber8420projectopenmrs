@@ -62,6 +62,16 @@ However, potential issues include the link being manipulated by a hacker or an u
 
 ### Part-2 Evidence Alignment Observations:
 
+### 2.1. Assurance Case 1
+
+### 2.2. Assurance Case 2
+
+### 2.3. Assurance Case 3
+
+### 2.4. Assurance Case 4
+
+### 2.5. Assurance Case 5
+
 ### Project Board Link
 - [Project Board](https://github.com/users/sanne88/projects/1)
 
