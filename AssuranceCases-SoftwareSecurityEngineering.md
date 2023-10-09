@@ -62,4 +62,7 @@ However, potential issues include the link being manipulated by a hacker or an u
 
 ### Part-2 Evidence Alignment Observations:
 
+### Project Board Link
+- [Project Board](https://github.com/users/sanne88/projects/1)
+
 ### Planning & Reflection
