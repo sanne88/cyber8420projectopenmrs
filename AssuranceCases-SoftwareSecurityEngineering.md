@@ -115,3 +115,8 @@ It is crucial to prioritize addressing these issues and enhancing the system's c
 - [Project Board](https://github.com/users/sanne88/projects/1)
 
 ### Planning & Reflection
+Team Bug Busters consists of Brian, Carl, Gopinath, Sahithi, Surya, and Vidya. The team is led by Sahithi.
+
+Individual Contributions:
+
+Sahithi handled the Super Admin Data management assurance case by analysing the open mrs code and updated the evidences for the data management use case. She also contributed to the OSS project documentation and the Project Reflection and Planning sections. Sahithi took initiative of managing the project board, breaking down tasks into smaller components, and creating tickets for this exercise. She also organized internal team meetings.
