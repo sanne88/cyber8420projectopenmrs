@@ -108,7 +108,23 @@ It is crucial to prioritize addressing these issues and enhancing the system's c
 ### 2.3. Assurance Case 3
 
 ### 2.4. Assurance Case 4
+**E1: Shared token validity**
 
+The links are strong enough and are resistant to manipulation. But if by any chance, the links are manipulated, the system ensures that no harm arises by setting a token expiry. After the token expires, the request coming back to the system will be disregarded.
+
+**E2: phr_sharing_token table**
+
+When a patient enters details of another trusted person, and initiates the process for records sharing, all these details will be stored in the phr_sharing_token table. Hence even if an unauthorized person gains access to the invite email, the information entered will be validated against what is already stored in the phr_sharing_token table.
+
+**E3: OAuth 2.0**
+
+Documentations of OpenMRS states that the system delegates authentication to OAuth 2.0 framework. OAuth 2.0 is an industry standard protocol for authorization and authentication on the internet. It is mainly used to secure access to web services and APIs.
+
+**E4: OAuth 2.0**
+
+Documentations of OpenMRS states that the shared tokens are encrypted. Hence there is no possibility of brute force attack on guessing the shared token.
+
+Source: [OpenMRS Patient Portal Module Documentation](https://wiki.openmrs.org/display/docs/Patient+Portal+Module+-+Personal+Cancer+Toolkit+Project+Revamp)
 ### 2.5. Assurance Case 5
 
 ### Project Board Link
@@ -119,4 +135,6 @@ Team Bug Busters consists of Brian, Carl, Gopinath, Sahithi, Surya, and Vidya. T
 
 Individual Contributions:
 
-Sahithi handled the Super Admin Data management assurance case by analysing the open mrs code and updated the evidences for the data management use case. She also contributed to the OSS project documentation and the Project Reflection and Planning sections. Sahithi took initiative of managing the project board, breaking down tasks into smaller components, and creating tickets for this exercise. She also organized internal team meetings.
+Sahithi handled the Super Admin Data management assurance case by analysing the open mrs code and updated the evidences for the data management use case. She also contributed to the evidence alignment observations and the Project Reflection and Planning sections. Sahithi took initiative of managing the project board, breaking down tasks into smaller components, and creating tickets for this exercise. She also organized internal team meetings.
+
+Surya worked on the Patient handling records assurance case. She gathered information from OpenMRS code base and the OpenMRS documenations. She also contributed to the evidence alignment observations and the project planning and reflection sections.
