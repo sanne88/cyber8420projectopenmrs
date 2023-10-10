@@ -60,6 +60,12 @@ However, potential issues include the link being manipulated by a hacker or an u
 - Authentication and Validation: OpenMRS delegates authentication to OAuth 2.0. This fact was noticed in the code, and supporting documents were found to substantiate this claim.
 - Additionally, the shared tokens are securely stored in the phr_sharing_token table and transmitted in encrypted forms
 
+### 1.5 API handling Assurance Case:
+
+**Diagram**:
+
+![Assurance_Case_5](/AssuranceCases_Diagrams/API_AssuranceCase.png)
+
 ### Part-2 Evidence Alignment Observations:
 
 ### 2.1. Authentication Usecase
