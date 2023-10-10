@@ -66,6 +66,46 @@ However, potential issues include the link being manipulated by a hacker or an u
 
 ### 2.2. Assurance Case 2
 
+### 2.2.1 Available Evidence
+
+** E1 - 1:  Role Based Access Control **
+
+The system services are managed according to user privileges and roles. In essence, the privileges associated with each role are all contained in the "role_privilege" table. The 'user_role' table contains a mapping between users and roles.
+Additionally, an authorize attribute is added to each api. The generic library 'org.openmrs.annotation' can be used to verify all of the available attributes in the OpenMRS system.AuthorizedAnnotationAttributes and the related PrivilegeConstants for each privilege are linked to the user role.
+Depending on the requirement, the attribute is applied at the method level as well as the class level.
+
+E2 : Prevent Illegal Redirection 
+
+When repeated login attempts are made, this mechanism prevents unnecessary redirects and the maximum number of attempts is 5.All HTTP and HTTPS calls are managed by the procedure "openConnectionCheckRedirects," which also looks for any unnecessary redirections.
+
+E3 : AES Encryption
+
+By utilizing AES encryption, the Open mrs system illustrates the security procedures employed in "Security.java file".
+
+Strong security measures against potential loss or theft are required since patient data confidentiality is of the utmost significance. By employing AES encryption, the system not only protects the data from eavesdropping but also verify its integrity. Any tampering or unauthorized modifications can be detected, ensuring the data's authenticity.Patient data is also safeguarded while stored in the database. Unauthorized access to the database or theft of stored data is rendered futile without the correct encryption keys.The use of an initialization vector (initVector) adds an extra layer of security by ensuring that identical plaintext inputs result in different ciphertext outputs. This prevents pattern recognition and enhances the overall security of the encryption
+
+The system ensures the patient data integrity using the cipher configuration 'AES/CBC/PKCS5Padding' to encrypt the data into a string, employing specific initialization vectors (initVector) and secret keys (secretKey).
+
+E4 : Encoded URI Parameters
+
+The system demonstrates the utilization of content encoding within the 'WebUtil.java' file. This file primarily contain methods responsible for enforcing the encoding of CSS (encodeForCSS) , Javascript (encodeForJavaScriptSource),  HTML (encodeForHtmlContent), and URI  ('encodeForUri) data. These encoding measures serve as crucial safeguards, ensuring that the system remains shielded from various injection attacks. By implementing these encoding practices, the system guarantees that it does not inadvertently expose any sensitive patient data while facilitating communication between the front end and back end.
+
+E5: Secured Browser Session Data
+
+Session cookies are only stored for the duration of the user's session and are deleted when the user logs out or closes their browser.There is sufficient evidence in the file 'CookieClearingFilter' to support the above claim. Also 'HTTP-only' flag is set on to cookies which prevents client-side scripts from accessing sensitive data stored in cookies.The system uses encodeURIComponent , which is encoding the Cookie and storing the data and is cleared when user logsout of the application.
+
+2.2.2 Unavilable / Insufficient Evidence
+
+E1 -2 Multi Factor Authentication
+
+The system doesnt support multi factor authentication, and there is no supporting evidence for this scenario.Hence there is still a risk that a staff user can gain access to the admin role , so implementing multi-factor authentication for critical features is suggested to safeguard patient data.
+
+E7: HIPPA Standard
+
+Based on the available documentation and open issues at https://wiki.openmrs.org/display/docs/Security+and+Access+Control, it appears that the system may not be fully equipped to adhere to data privacy standards, particularly with regard to the handling of data location. This raises concerns about the system's ability to meet the requirements of data privacy standards.
+
+It is crucial to prioritize addressing these issues and enhancing the system's capabilities to ensure compliance with data privacy standards, especially HIPAA, GDPR which is of atmost importance in healthcare environments. Compliance with GDPR is essential to ensure patient data privacy and confidentiality.
+
 ### 2.3. Assurance Case 3
 
 ### 2.4. Assurance Case 4
