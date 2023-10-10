@@ -62,19 +62,27 @@ However, potential issues include the link being manipulated by a hacker or an u
 
 ### Part-2 Evidence Alignment Observations:
 
-### 2.1. Assurance Case 1
+### 2.1. Authentication Usecase
+
+### 2.1.1 Available Evidences
+
+OpenMRS has availoable evidences for password encryption and password change policy that includes a security question. TLS/HTTPS is the standard for application that is written on the official documentation.
+
+### 2.1.2 Unavailable Evidences
+
+Multi-factor authentication is not present and is assessed as the most commonly missing feauture. An additional security question can also be added to further strengthen the password change policy.
 
 ### 2.2. Assurance Case 2
 
 ### 2.2.1 Available Evidence
 
-**E1 - 1:  Role Based Access Control:**
+**E1 - 1: Role Based Access Control:**
 
 The system services are managed according to user privileges and roles. In essence, the privileges associated with each role are all contained in the "role_privilege" table. The 'user_role' table contains a mapping between users and roles.
 Additionally, an authorize attribute is added to each api. The generic library 'org.openmrs.annotation' can be used to verify all of the available attributes in the OpenMRS system.AuthorizedAnnotationAttributes and the related PrivilegeConstants for each privilege are linked to the user role.
 Depending on the requirement, the attribute is applied at the method level as well as the class level.
 
-**E2 : Prevent Illegal Redirection** 
+**E2 : Prevent Illegal Redirection**
 
 When repeated login attempts are made, this mechanism prevents unnecessary redirects and the maximum number of attempts is 5.All HTTP and HTTPS calls are managed by the procedure "openConnectionCheckRedirects," which also looks for any unnecessary redirections.
 
@@ -88,7 +96,7 @@ The system ensures the patient data integrity using the cipher configuration 'AE
 
 **E4 : Encoded URI Parameters**
 
-The system demonstrates the utilization of content encoding within the 'WebUtil.java' file. This file primarily contain methods responsible for enforcing the encoding of CSS (encodeForCSS) , Javascript (encodeForJavaScriptSource),  HTML (encodeForHtmlContent), and URI  ('encodeForUri) data. These encoding measures serve as crucial safeguards, ensuring that the system remains shielded from various injection attacks. By implementing these encoding practices, the system guarantees that it does not inadvertently expose any sensitive patient data while facilitating communication between the front end and back end.
+The system demonstrates the utilization of content encoding within the 'WebUtil.java' file. This file primarily contain methods responsible for enforcing the encoding of CSS (encodeForCSS) , Javascript (encodeForJavaScriptSource), HTML (encodeForHtmlContent), and URI ('encodeForUri) data. These encoding measures serve as crucial safeguards, ensuring that the system remains shielded from various injection attacks. By implementing these encoding practices, the system guarantees that it does not inadvertently expose any sensitive patient data while facilitating communication between the front end and back end.
 
 **E5: Secured Browser Session Data**
 
@@ -108,6 +116,7 @@ It is crucial to prioritize addressing these issues and enhancing the system's c
 ### 2.3. Assurance Case 3
 
 ### 2.4. Assurance Case 4
+
 **E1: Shared token validity**
 
 The links are strong enough and are resistant to manipulation. But if by any chance, the links are manipulated, the system ensures that no harm arises by setting a token expiry. After the token expires, the request coming back to the system will be disregarded.
@@ -125,12 +134,30 @@ Documentations of OpenMRS states that the system delegates authentication to OAu
 Documentations of OpenMRS states that the shared tokens are encrypted. Hence there is no possibility of brute force attack on guessing the shared token.
 
 Source: [OpenMRS Patient Portal Module Documentation](https://wiki.openmrs.org/display/docs/Patient+Portal+Module+-+Personal+Cancer+Toolkit+Project+Revamp)
-### 2.5. Assurance Case 5
+**2.5.Assurance Case 5**
+
+**2.5.1 Evidence Available** :
+
+**E1 - Results of Parameterized Queries**
+
+Parameterized queries in OpenMRS, as in other systems, are essential for security, efficiency, and maintainability. They provide a robust mechanism to interact with the database safely, without exposing the system to potential threats.
+
+**E2 - URI Parameter documentation review**
+
+URI parameters in OpenMRS are a critical aspect of how the system navigates and fetches data. They offer flexibility and stateless operations but should be used carefully, especially considering patient data's sensitive nature.
+
+**2.5.2 Evidence Unavailable** :
+
+**E1 - Multi-factor Authentication**
+
+Multi-factor authentication is a powerful tool to enhance the security of OpenMRS, implementing it requires careful planning to balance security needs with user convenience. It's an especially valuable consideration for healthcare settings where the stakes related to data breaches are particularly high
 
 ### Project Board Link
+
 - [Project Board](https://github.com/users/sanne88/projects/1)
 
 ### Planning & Reflection
+
 Team Bug Busters consists of Brian, Carl, Gopinath, Sahithi, Surya, and Vidya. The team is led by Sahithi.
 
 Individual Contributions:
@@ -138,3 +165,7 @@ Individual Contributions:
 Sahithi handled the Super Admin Data management assurance case by analysing the open mrs code and updated the evidences for the data management use case. She also contributed to the evidence alignment observations and the Project Reflection and Planning sections. Sahithi took initiative of managing the project board, breaking down tasks into smaller components, and creating tickets for this exercise. She also organized internal team meetings.
 
 Surya worked on the Patient handling records assurance case. She gathered information from OpenMRS code base and the OpenMRS documenations. She also contributed to the evidence alignment observations and the project planning and reflection sections.
+
+Gopinath worked on the authentication usecase as well as reviewed other's work on github.
+
+Vidya worked on API Assurance case .She fetched information from openMRS documentation about API and possible security layers. Also she proposed additional layer of security that can be possible for openMRS.
