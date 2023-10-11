@@ -78,7 +78,7 @@ OpenMRS has availoable evidences for password encryption and password change pol
 
 Multi-factor authentication is not present and is assessed as the most commonly missing feauture. An additional security question can also be added to further strengthen the password change policy.
 
-### 2.2. Assurance Case 2
+### 2.2. Data Management
 
 ### 2.2.1 Available Evidence
 
@@ -119,9 +119,7 @@ The system doesnt support multi factor authentication, and there is no supportin
 Based on the available documentation https://wiki.openmrs.org/display/docs/Security+and+Access+Control, it appears that the system may not be fully equipped to adhere to data privacy standards, particularly with regard to the handling of data location. This raises concerns about the system's ability to meet the requirements of data privacy standards.
 It is crucial to prioritize addressing these issues and enhancing the system's capabilities to ensure compliance with data privacy standards, especially HIPAA, GDPR which is of atmost importance in healthcare environments. Compliance with GDPR is essential to ensure patient data privacy and confidentiality.
 
-### 2.3. Assurance Case 3
-
-### 2.4. Assurance Case 4
+### 2.3. Patient Sharing Records
 
 **E1: Shared token validity**
 
@@ -140,9 +138,10 @@ Documentations of OpenMRS states that the system delegates authentication to OAu
 Documentations of OpenMRS states that the shared tokens are encrypted. Hence there is no possibility of brute force attack on guessing the shared token.
 
 Source: [OpenMRS Patient Portal Module Documentation](https://wiki.openmrs.org/display/docs/Patient+Portal+Module+-+Personal+Cancer+Toolkit+Project+Revamp)
-**2.5.Assurance Case 5**
 
-**2.5.1 Evidence Available** :
+**2.4. **
+
+**2.4.1 Evidence Available** :
 
 **E1 - Results of Parameterized Queries**
 
@@ -152,7 +151,7 @@ Parameterized queries in OpenMRS, as in other systems, are essential for securit
 
 URI parameters in OpenMRS are a critical aspect of how the system navigates and fetches data. They offer flexibility and stateless operations but should be used carefully, especially considering patient data's sensitive nature.
 
-**2.5.2 Evidence Unavailable** :
+**2.4.2 Evidence Unavailable** :
 
 **E1 - Multi-factor Authentication**
 
@@ -166,7 +165,7 @@ Multi-factor authentication is a powerful tool to enhance the security of OpenMR
 
 Team Bug Busters consists of Brian, Carl, Gopinath, Sahithi, Surya, and Vidya. The team is led by Sahithi.
 
-Individual Contributions:
+**Individual Contributions:**
 
 Sahithi handled the Super Admin Data management assurance case by analysing the open mrs code and updated the evidences for the data management use case. She also contributed to the evidence alignment observations and the Project Reflection and Planning sections. Sahithi took initiative of managing the project board, breaking down tasks into smaller components, and creating tickets for this exercise. She also organized internal team meetings.
 
@@ -175,3 +174,15 @@ Surya worked on the Patient handling records assurance case. She gathered inform
 Gopinath worked on the authentication usecase as well as reviewed other's work on github.
 
 Vidya worked on API Assurance case .She fetched information from openMRS documentation about API and possible security layers. Also she proposed additional layer of security that can be possible for openMRS.
+
+Carl has worked on the Login session hijacking use case and submitted the assurance case and respective assessment.
+
+**Team Contribution:**
+
+What we did well:
+
+This time, we've initiated our internal discussions ahead of schedule and have allocated tasks accordingly.
+
+What can we improve:
+
+Planning ahead for submissions can prevent delays. It's also helpful if everyone on the team proofreads the document to catch any missing or needed additions.
