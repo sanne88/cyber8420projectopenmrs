@@ -32,7 +32,11 @@ Denial of Service Attack on SQL Database :
 The existence of the SPIKE ticket, as documented in https://wiki.openmrs.org/display/docs/Support+for+Clustering, provides clear indications of a roadmap in progress for both the web app server , but not enough information on the database clustering. While Docker deployments for the database cluster have been identified, additional investigation is required to understand the specifics of the distributed architecture implementation.
 Implementing a distributed architecture by setting up a cluster of database nodes helps in mitigating the Denial Of Service attack on database. This involves having multiple database servers working together to share the load and provide redundancy.Utilize a load balancer to evenly distribute incoming database requests across the cluster nodes. This ensures that no single node becomes a bottleneck and enhances the overall performance and availability of the database.
 
+### Project Board
+
+[!Project Board](https://github.com/users/sanne88/projects/1)
+
 ### 2.2 Team Reflection:
 
-
+Initially few of the team members had questions what to deliver in the data flow diagram and how much details were needed. There were some confusions about the data flow vs control flow. The weekly team check-in with Dr. Gandi helped to clarify the deliverable. First drafts of DFDs were developed and reviewed during Zoom meetings and tasks were defined and assigned to the team members to complete the assignment. The team kept revising the DFDs for the system of interest Opem MRS Core.
 
