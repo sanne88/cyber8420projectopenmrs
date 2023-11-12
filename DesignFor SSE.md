@@ -39,4 +39,6 @@ Implementing a distributed architecture by setting up a cluster of database node
 ### 2.2 Team Reflection:
 
 Initially few of the team members had questions what to deliver in the data flow diagram and how much details were needed. There were some confusions about the data flow vs control flow. The weekly team check-in with Dr. Gandi helped to clarify the deliverable. First drafts of DFDs were developed and reviewed during Zoom meetings and tasks were defined and assigned to the team members to complete the assignment. The team kept revising the DFDs for the system of interest Opem MRS Core.
+Sahithi and Surya initiated the Internal team meeting and brainstormed with other team members and identified the data flow use cases. They worked on the Sensitive data access flow of the system.
+
 
