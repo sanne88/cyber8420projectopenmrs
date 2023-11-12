@@ -2,7 +2,7 @@
 ### 1.1 Data Flow Diagrams:
 ### Sensitive Data Access DFD:
 ![Sensitive Data Access](/DataFlow/SensitiveDataFlow.png)
-![Sensitive Data Access Threat Model Report](/DataFlow/SensitiveDataAccessDFD.htm)
+![Sensitive Data Access Threat Model Report](https://htmlpreview.github.io/?https://github.com/sanne88/cyber8420projectopenmrs/blob/main/DataFlow/SensitiveDataAccessDFD.html)
 
 ### Part-2: Observation:
 
