@@ -6,7 +6,7 @@
 
 ### Authentication DFD:
 ![Authentication](/DataFlow/Authentication-DFD.png)
-[Sensitive Data Access Threat Model Report](https://htmlpreview.github.io/?https://github.com/sanne88/cyber8420projectopenmrs/blob/main/DataFlow/Authentication-report.htm)
+[Authentication Threat Model Report](https://htmlpreview.github.io/?https://github.com/sanne88/cyber8420projectopenmrs/blob/main/DataFlow/Authentication-report.htm)
 
 ### Part-2: Observation:
 
