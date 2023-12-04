@@ -17,6 +17,13 @@ If there are missing or null values for certain cache configurations in cachePro
 
 Mitigation: Implement appropriate null checks.
 
+### CWE-352: Cross-Site Request Forgery (CSRF)
+
+This issue is reported in the threat model generated for Data flow use case and we did a manual code review and examined the code manually. 
+In the system's code, specifically in the 'OpenmrsFilter.java' file, there are filters in place for handling requests. These filters are designed to provide CSRF protection. Importantly, the 'OpenmrsFilter' is set up to execute before the 'CSRFGuard' filter. This order is specified in the 'Web.xml' file at lines 168 and 178.
+
+Additionally, the CSRF file, which contains tokens to prevent forgery and ensure system safety, is served dynamically. Additionally,this file isn't cached to avoid using outdated tokens and to maintain the effectiveness of the security measures.
+
 ### 1.3 Automate Code Review
 
 
