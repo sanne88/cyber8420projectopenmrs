@@ -89,6 +89,17 @@ This vulnerability is introduced when the product uses a weak cryptographic algo
 
 ### Part-2: Key Findings and Contributions
 ### 2.1 Key Findings
+We attempted both manual and automated code analysis on OpenMRS-core repository. Out of the suggested automated code analysis tools, we found GitHub CodeQL and SonarCloud suitable because of ease of integration with the OpenMRS-core repository. We forked the original repository and ran these tools on the forked repository. We scanned the results of our analysis and found these seven CWEs critical in our repository.
+- [CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')](https://cwe.mitre.org/data/definitions/22.html)
+- [CWE-307: Improper Restriction of Excessive Authentication Attempts](https://cwe.mitre.org/data/definitions/307.html)
+- [CWE-311: Missing Encryption of Sensitive Data](https://cwe.mitre.org/data/definitions/311.html)
+- [CWE-321: Use of Hard-coded Cryptographic Key](https://cwe.mitre.org/data/definitions/321.html)
+- [CWE-327: Use of a Broken or Risky Cryptographic Algorithm](https://cwe.mitre.org/data/definitions/327.html)
+- [CWE-470: Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection')](https://cwe.mitre.org/data/definitions/470.html)
+- [CWE-611: Improper Restriction of XML External Entity Reference](https://cwe.mitre.org/data/definitions/611.html) 
+ 
+In summary, the code review of the OpenMRS codebase reveled some of critical vulnerabilities across various files. One significant finding is related to the utilization of weaker or risky encryption methods, potentially compromising sensitive information and highlighting the need for a security update. Additionally, the authentication mechanism lacks measures to prevent brute force attacks, leaving the system vulnerable to multiple failed login attempts. At the database layer, there is an unsafe reflection due to dynamic class specification from external, untrusted sources. Instances were identified where weak XML parsing may lead to XML External Entity attacks. The web utility filters exhibit instances of CWE-22, indicating improper limitation of pathname and potential susceptibility to directory traversal attacks.
+
 ### 2.2 Contributions 
 
 ## Overview
