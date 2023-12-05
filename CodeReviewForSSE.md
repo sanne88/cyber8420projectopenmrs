@@ -50,6 +50,12 @@ In the context of this code:
 The absence of these mechanisms means that if this code is part of the larger authentication system, and if there are no other controls in place elsewhere to handle excessive authentication attempts, it could be vulnerable to brute force attacks as indicated by CWE-307. However, it's important to note that such controls might be implemented in other parts of the OpenMRS system or in its configuration settings, which are not visible in this specific code snippet.
 
 ### 1.4 Automate Code Review
+Following are the results from running automated code analysis.
+### GitHub CodeQL
+![GitHub CodeQL](./CodeScanResults/CodeQL.png)
+
+### SonarCloud
+![SonarCloud](./CodeScanResults/SonarCloud.png)
 
 ### CWE-470: Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection')
 Issue:
@@ -119,17 +125,15 @@ Our manual code review resulted in targeted changes across specific files in the
 Our combined efforts in design scrutiny and code-level enhancements contribute to a more robust and secure OpenMRS system. By addressing design flaws, emphasizing the need for specific security measures, and implementing safeguards against common weaknesses, we aim to fortify the overall security posture of the application.
 
 ---
-
-*Team Bug Busters: Gopinath, Sahithi, Surya, and Vidya*
-
-### Project Board & Repository Link
+### 2.3 Project Board & Repository Link
 - [Project Board](https://github.com/users/sanne88/projects/1)
 -  [Project Repository](https://github.com/sanne88/cyber8420projectopenmrs)
-### Planning & Reflection
 
+### 2.4 Planning & Reflection
 Team Bug Busters consists of  Gopinath, Sahithi, Surya, and Vidya.
 
 First, we implemented an automatic code-scanning code review process. When we first used CodeQL, it supplied several test files along with a list of potential threats.As recommended by the professor, we have also looked into SonarCloud code scanning.
 In addition, because the code base is large, our team decided that automated code scanning should be performed before manual code reviews in order to scope our CWE list. With the size of the codebase, this method was more realistic than human code review. 
 Based on the use cases, we divided the work between manual and automated code reviews after our initial discussion of the code review strategy. Each team member was assigned a specific task to do and contributed to the assignment.
+Surya initiated the automated code review tool selection and setup GitHub CodeQL and SonarCloud for OpenMRS-core forked repository. Surya and Sahithi worked on the data-sensitive use case's manual code review in addition to the automatic tool scanning with Code QL, Sonar Cloud.
 Vidya and Gopinath worked on Manual Code review for Authentication and API server functionalities.
