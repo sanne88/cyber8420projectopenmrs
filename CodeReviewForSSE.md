@@ -9,7 +9,7 @@ This approach helped us narrow down our focus to just the OpenMRS Core, making s
 
 ## 1.2 CWE Checklist for the Manual Code Review Process
 
-Before initiating the manual code review process, it is crucial to follow this checklist derived from our previous assignments:
+Before initiating the manual code review process, we have come up with this checklist derived from our previous assignments:
 
 1. ☑️ **CWE-798: Use of Hard-coded Credentials**
 2. ☑️ **CWE-352: Cross-Site Request Forgery (CSRF)**
@@ -90,6 +90,27 @@ This vulnerability is introduced when the product uses a weak cryptographic algo
 ### Part-2: Key Findings and Contributions
 ### 2.1 Key Findings
 ### 2.2 Contributions 
+
+## Overview
+
+This repository documents the findings and contributions of our team's security review of the OpenMRS system. Our analysis focused on both design and code aspects, aiming to enhance the security posture of the application.
+
+## Design Contributions
+
+In our examination of the design, we scrutinized Data Flow Diagrams, particularly for Sensitive Data Access and Authentication. The sensitive data access flow revealed 36 issues, of which 26 were mitigated, and 10 are under investigation. Notably, our findings emphasized the importance of implementing Multifactor Authentication (MFA) to counter potential spoofing attacks.
+
+## Code Changes
+
+Our manual code review resulted in targeted changes across specific files in the OpenMRS system. Notable modifications include the implementation of null checks in CachePropertiesUtil.java, enhancements to Cross-Site Request Forgery (CSRF) protection in OpenmrsFilter.java, and improvements in encryption practices in UserLogin.java. Additionally, DatabaseUtil.java underwent adjustments to mitigate externally controlled input risks. The Security.java file saw changes, favoring dynamic key generation over hard coding for improved security.
+
+## Overall Contribution
+
+Our combined efforts in design scrutiny and code-level enhancements contribute to a more robust and secure OpenMRS system. By addressing design flaws, emphasizing the need for specific security measures, and implementing safeguards against common weaknesses, we aim to fortify the overall security posture of the application.
+
+---
+
+*Team Bug Busters: Gopinath, Sahithi, Surya, and Vidya*
+
 ### Project Board & Repository Link
 - [Project Board](https://github.com/users/sanne88/projects/1)
 -  [Project Repository](https://github.com/sanne88/cyber8420projectopenmrs)
