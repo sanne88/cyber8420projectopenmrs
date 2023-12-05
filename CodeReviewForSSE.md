@@ -24,8 +24,21 @@ In the system's code, specifically in the 'OpenmrsFilter.java' file, there are f
 
 Additionally, the CSRF file, which contains tokens to prevent forgery and ensure system safety, is served dynamically. Additionally,this file isn't cached to avoid using outdated tokens and to maintain the effectiveness of the security measures.
 
-### 1.3 Automate Code Review
+### CWE-311:Missing Encryption of Sensitive Data
+FileName:UserLogin.java
+From line 148,149,150
+OpenMRS authentication system transmits credentials, such as usernames and passwords, over an unencrypted channel, it risks exposing these details to unauthorized parties who might intercept the data. This is particularly crucial for applications that transmit data over the internet. If implementing a custom authentication scheme (as in the **TestAuthenticationCredentials** class ), it's crucial to ensure that any sensitive data handled by the module is encrypted. This includes not just the credentials themselves, but also any related data that might be used in the authentication process.
 
+### CWE-307: Improper Restriction of Excessive Authentication Attempts is not explicitly present in the code snippet itself.
+FileName:AuthenticationUserSessionListener.java
+From line 22-51
+It refers to the lack of mechanisms to prevent or mitigate brute force attacks, where an attacker tries multiple passwords or passphrases with the hope of eventually guessing correctly. The code provided focuses on logging authentication events (like login success or failure), but it does not show any functionality related to limiting the number of failed login attempts or implementing account lockout policies after a certain number of failed attempts. These are typical strategies used to combat brute force attacks.
+In the context of this code:
+•There is no mechanism shown for tracking the number of consecutive failed login attempts for a user.
+•There is no implementation of timeouts or account lockouts after multiple failed attempts.
+The absence of these mechanisms means that if this code is part of the larger authentication system, and if there are no other controls in place elsewhere in the system to handle excessive authentication attempts, then it could be vulnerable to brute force attacks as indicated by CWE-307. However, it's important to note that such controls might be implemented in other parts of the OpenMRS system or in its configuration settings, which are not visible in this specific code snippet.
+
+### 1.3 Automate Code Review
 
 ### CWE-470: Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection')
 Issue:
@@ -76,3 +89,4 @@ Team Bug Busters consists of  Gopinath, Sahithi, Surya, and Vidya.
 First, we implemented an automatic code-scanning code review process. When we first used CodeQL, it supplied several test files along with a list of potential threats.As recommended by the professor, we have also looked into SonarQube code scanning.
 In addition, because the code base is large, our team decided that automated code scanning should be performed before manual code reviews in order to scope our CWE list. With the size of the codebase, this method was more realistic than human code review. 
 Based on the use cases, we divided the work between manual and automated code reviews after our initial discussion of the code review strategy. Each team member was assigned a specific task to do and contributed to the assignment.
+Vidya and Gopinath worked on Manual Code review for Authentication and API server functionalities.
